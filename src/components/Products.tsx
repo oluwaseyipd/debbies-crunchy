@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import productSpicy from "@/assets/product-spicy.jpg";
 import productSweet from "@/assets/product-sweet.jpg";
 import productSavory from "@/assets/product-savory.jpg";
+import OrderModal from "./OrderModal";
 
 const products = [
   {
@@ -32,6 +35,14 @@ const products = [
 ];
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<{ name: string; price: string } | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOrderClick = (name: string, price: string) => {
+    setSelectedProduct({ name, price });
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="flavors" className="py-20 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,18 +75,34 @@ const Products = () => {
                     {product.tag}
                   </Badge>
                 </div>
-                <div className="p-6 space-y-3">
+                <div className="p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-card-foreground">{product.name}</h3>
                     <span className="text-xl font-bold text-accent">{product.price}</span>
                   </div>
                   <p className="text-muted-foreground">{product.description}</p>
+                  <Button 
+                    variant="cta" 
+                    className="w-full"
+                    onClick={() => handleOrderClick(product.name, product.price)}
+                  >
+                    Order Now
+                  </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
+
+      {selectedProduct && (
+        <OrderModal
+          open={isModalOpen}
+          onOpenChange={setIsModalOpen}
+          productName={selectedProduct.name}
+          productPrice={selectedProduct.price}
+        />
+      )}
     </section>
   );
 };
