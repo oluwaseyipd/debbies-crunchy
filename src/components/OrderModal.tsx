@@ -27,6 +27,7 @@ const OrderModal = ({ open, onOpenChange, productName, productPrice }: OrderModa
   const [quantity, setQuantity] = useState(1);
   const [date, setDate] = useState<Date>();
   const [time, setTime] = useState("12:00");
+  const [period, setPeriod] = useState<"AM" | "PM">("PM");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ const OrderModal = ({ open, onOpenChange, productName, productPrice }: OrderModa
       return;
     }
 
-    const orderDetails = `New Order!\n\nProduct: ${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}\nDelivery Date: ${format(date, "PPP")} at ${time}`;
+    const orderDetails = `New Order!\n\nProduct: ${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}\nDelivery Date: ${format(date, "PPP")} at ${time} ${period}`;
     const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(orderDetails)}`;
     
     window.open(whatsappUrl, "_blank");
@@ -107,22 +108,55 @@ const OrderModal = ({ open, onOpenChange, productName, productPrice }: OrderModa
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="w-[120px] justify-start text-left font-normal"
+                    className="w-[140px] justify-start text-left font-normal"
                   >
                     <Clock className="mr-2 h-4 w-4" />
-                    {time}
+                    {time} {period}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-3" align="start">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="time">Time</Label>
-                    <Input
-                      id="time"
-                      type="time"
-                      value={time}
-                      onChange={(e) => setTime(e.target.value)}
-                      className="w-full"
-                    />
+                    <div className="flex gap-2">
+                      <select
+                        value={time}
+                        onChange={(e) => setTime(e.target.value)}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                      >
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="01:00">01:00</option>
+                        <option value="01:30">01:30</option>
+                        <option value="02:00">02:00</option>
+                        <option value="02:30">02:30</option>
+                        <option value="03:00">03:00</option>
+                        <option value="03:30">03:30</option>
+                        <option value="04:00">04:00</option>
+                        <option value="04:30">04:30</option>
+                        <option value="05:00">05:00</option>
+                        <option value="05:30">05:30</option>
+                        <option value="06:00">06:00</option>
+                        <option value="06:30">06:30</option>
+                        <option value="07:00">07:00</option>
+                        <option value="07:30">07:30</option>
+                        <option value="08:00">08:00</option>
+                        <option value="08:30">08:30</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                      </select>
+                      <select
+                        value={period}
+                        onChange={(e) => setPeriod(e.target.value as "AM" | "PM")}
+                        className="flex h-10 w-20 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                      >
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
                   </div>
                 </PopoverContent>
               </Popover>
