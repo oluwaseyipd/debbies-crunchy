@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, Facebook, Twitter, MessageCircle } from "lucide-react";
+import { PhoneCallIcon, MessageSquareHeart , MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import LogoImage from "@/assets/main-logo.png";
 
 const Footer = () => {
   const [name, setName] = useState("");
@@ -86,6 +87,7 @@ const Footer = () => {
                 <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-xl text-accent-foreground">
                   D
                 </div>
+                {/* <img src={LogoImage} alt="Logo" className="w-32" /> */}
                 <span className="text-2xl font-bold">Debbie's Crunchy</span>
               </div>
               <p className="text-footer-foreground/80 leading-relaxed max-w-md">
@@ -95,32 +97,21 @@ const Footer = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Follow Us</h4>
-              <div className="flex gap-4">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
+              <h4 className="font-semibold text-lg">Connect</h4>
+              <div className="flex flex-col gap-4">
+                <div className= "flex gap-x-3 w-[300px] h-10 rounded-full bg-footer-foreground/10">
+                    <p className="w-10 h-10 rounded-full bg-accent flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110">
+                       <PhoneCallIcon className="w-5 h-5" />
+                    </p>
+                    <span className="flex items-center">+2349063578189</span>
+                </div>
+
+                <div className= "flex gap-x-3 w-[300px] h-10 rounded-full bg-footer-foreground/10">
+                    <p className="w-10 h-10 rounded-full bg-accent flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110">
+                       <MessageSquareHeart className="w-5 h-5" />
+                    </p>
+                    <span className="flex items-center">+2347089855253</span>
+                </div>
               </div>
             </div>
 
@@ -128,14 +119,6 @@ const Footer = () => {
               <p className="text-sm text-footer-foreground/60">
                 &copy; {new Date().getFullYear()} Debbie's Crunchy. All rights reserved.
               </p>
-              <div className="flex gap-6 mt-3">
-                <a href="#" className="text-sm text-footer-foreground/60 hover:text-accent transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-sm text-footer-foreground/60 hover:text-accent transition-colors">
-                  Terms of Service
-                </a>
-              </div>
             </div>
           </div>
         </div>

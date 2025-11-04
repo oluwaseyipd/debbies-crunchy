@@ -77,7 +77,7 @@ const Testimonials = () => {
 
                 {/* Testimonial Content */}
                 <div className="space-y-4">
-                  <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed">
+                  <p className="text-lg sm:text-xl md:text-2xl font-light text-white leading-relaxed">
                     {testimonials[currentIndex].text}
                   </p>
                   <div className="flex justify-center gap-1">
@@ -92,7 +92,7 @@ const Testimonials = () => {
                   <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg">
                     {testimonials[currentIndex].initial}
                   </div>
-                  <span className="text-lg font-semibold">{testimonials[currentIndex].name}</span>
+                  <span className="text-lg font-semibold text-white">{testimonials[currentIndex].name}</span>
                 </div>
               </div>
             </CardContent>

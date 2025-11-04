@@ -10,27 +10,27 @@ import OrderModal from "./OrderModal";
 const products = [
   {
     id: 1,
-    name: "Spicy Ginger Heat",
+    name: "Plantain Chips",
     description: "A bold fusion of fiery ginger and exotic chili spices",
     image: productSpicy,
     tag: "BEST SELLER",
-    price: "$12.99",
+    price: "₦200",
   },
   {
     id: 2,
-    name: "Honey Sesame Bliss",
+    name: "Potato Chips",
     description: "Sweet honey glaze with toasted sesame perfection",
     image: productSweet,
     tag: "NEW",
-    price: "$11.99",
+    price: "₦200",
   },
   {
     id: 3,
-    name: "Herb Garden Crunch",
+    name: "Big Size Plantain Chips",
     description: "Savory blend of rosemary, thyme, and garlic",
     image: productSavory,
     tag: "CUSTOMER FAVORITE",
-    price: "$12.99",
+    price: "₦1500",
   },
 ];
 

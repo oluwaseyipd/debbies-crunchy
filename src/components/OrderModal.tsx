@@ -42,7 +42,7 @@ const OrderModal = ({ open, onOpenChange, productName, productPrice }: OrderModa
     }
 
     const orderDetails = `New Order!\n\nProduct: ${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}\nDelivery Date: ${format(date, "PPP")} at ${time} ${period}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(orderDetails)}`;
+    const whatsappUrl = `https://wa.me/2347089855253?text=${encodeURIComponent(orderDetails)}`;
     
     window.open(whatsappUrl, "_blank");
     onOpenChange(false);

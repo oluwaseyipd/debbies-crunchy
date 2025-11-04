@@ -2,8 +2,15 @@ import { Button } from "@/components/ui/button";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 
 const CTASection = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  // const scrollToContact = () => {
+  //   const element = document.getElementById("contact");
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
+    const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -36,17 +43,13 @@ const CTASection = () => {
             <Button
               variant="hero"
               size="xl"
-              onClick={scrollToContact}
+              onClick={() => scrollToSection("flavors")}
               className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 group shadow-2xl"
             >
               Shop All Flavors
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-
-          <p className="text-sm sm:text-base opacity-80 pt-4">
-            🚚 Free shipping on orders over $30 | 💯 100% satisfaction guarantee
-          </p>
         </div>
       </div>
     </section>

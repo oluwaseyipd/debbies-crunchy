@@ -52,7 +52,7 @@ const Header = () => {
               onClick={() => scrollToSection("why-us")}
               className="text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200 font-medium"
             >
-              Why Us
+              Why Choose Us
             </button>
             <button
               onClick={() => scrollToSection("reviews")}
@@ -60,7 +60,7 @@ const Header = () => {
             >
               Reviews
             </button>
-            <Button variant="cta" size="default" onClick={() => scrollToSection("shop")}>
+            <Button variant="cta" size="default" onClick={() => scrollToSection("flavors")}>
               Shop Now
             </Button>
           </nav>
