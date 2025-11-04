@@ -87,7 +87,7 @@ const Header = () => {
                 onClick={() => scrollToSection("why-us")}
                 className="text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200 font-medium text-left"
               >
-                Why Us
+                Why Choose Us
               </button>
               <button
                 onClick={() => scrollToSection("reviews")}

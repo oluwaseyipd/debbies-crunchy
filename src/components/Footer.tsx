@@ -24,7 +24,7 @@ const Footer = () => {
     }
 
     const whatsappMessage = `Hello! My name is ${name}. ${message}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/2347089855253?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
     
     toast({
