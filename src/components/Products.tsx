@@ -2,38 +2,55 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import productSpicy from "@/assets/product-spicy.jpg";
-import productSweet from "@/assets/product-sweet.jpg";
-import productSavory from "@/assets/product-savory.jpg";
+import product1 from "@/assets/product-1.jpg";
+import product2 from "@/assets/product-2.jpg";
+import product3 from "@/assets/product-3.jpg";
+import product4 from "@/assets/product-4.png";
+import product5 from "@/assets/product-5.jpg";
 import OrderModal from "./OrderModal";
 
 const products = [
   {
     id: 1,
-    name: "Plantain Chips",
-    description: "A bold fusion of fiery ginger and exotic chili spices",
-    image: productSpicy,
+    name: "Mini Plantain Chips",
+    description: "Crispy, golden plantain slices with a hint of natural sweetness. A wholesome, satisfying crunch.",
+    image: product1, 
     tag: "BEST SELLER",
-    price: "₦200",
+    price: "₦100",
   },
   {
     id: 2,
-    name: "Potato Chips",
-    description: "Sweet honey glaze with toasted sesame perfection",
-    image: productSweet,
+    name: "Medium Plantain Chips",
+    description: "Perfectly ripened plantains, thinly sliced and fried to a delightful crisp. Irresistibly savory.",
+    image: product2,
     tag: "NEW",
-    price: "₦200",
+    price: "₦1000",
   },
   {
     id: 3,
     name: "Big Size Plantain Chips",
-    description: "Savory blend of rosemary, thyme, and garlic",
-    image: productSavory,
+    description: "Generous cuts of premium plantains, achieving a rich, hearty crunch with every golden bite.",
+    image: product3, 
     tag: "CUSTOMER FAVORITE",
-    price: "₦1500",
+    price: "₦4000",
+  },
+  {
+    id: 4,
+    name: "Mini Potato Chips",
+    description: "Thinly sliced potatoes, lightly seasoned and fried to a classic, airy crispness. Pure, simple delight.",
+    image: product4, 
+    tag: "CLASSIC", 
+    price: "₦100",
+  },
+  {
+    id: 5,
+    name: "Big Size Potato Chips",
+    description: "Hearty, golden potato chips with a satisfying crunch. The perfect staple for any snack moment.",
+    image: product5, 
+    tag: "GO-TO SNACK", 
+    price: "₦4000",
   },
 ];
-
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<{ name: string; price: string } | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);

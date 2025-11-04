@@ -6,24 +6,31 @@ import { Button } from "@/components/ui/button";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah M.",
+    name: "Oluwaseyi",
     rating: 5,
-    text: "These snacks are absolutely divine! The Spicy Ginger Heat is my new obsession. Perfect balance of crunch and flavor.",
-    initial: "S",
+    text: "I'm not usually a snack enthusiast, but I literally couldn't put the potato chips down! Now I truly believe that sweet-smelling, tasty food gives a kind of joy. I absolutely love these potato chips.",
+    initial: "O",
   },
   {
     id: 2,
-    name: "Michael T.",
+    name: "Omolayo",
     rating: 5,
-    text: "I've tried every gourmet snack brand out there, and Debbie's Crunchy stands above the rest. The quality is unmatched!",
-    initial: "M",
+    text: "Debbie's Crunchy  is Perfectly cooked, flavorful, and crunchy. I'm hooked! Best chips I've had in a long while. Keep crunching, Debbie!",
+    initial: "O",
   },
   {
     id: 3,
-    name: "Jennifer L.",
+    name: "Precious",
     rating: 5,
-    text: "Finally, a healthy snack that actually tastes amazing! The Honey Sesame Bliss is my go-to for afternoon cravings.",
-    initial: "J",
+    text: "I actually enjoyed the chips. It was crispy, sweet and worth craving too. I will surely get more of that🤗",
+    initial: "P",
+  },
+    {
+    id: 3,
+    name: "Babson",
+    rating: 5,
+    text: "The plantain chips is crunchy and delicious,so yummy. I can't forget the lovely taste. Kudos to Debbie's crunchy.",
+    initial: "B",
   },
 ];
 
