@@ -84,10 +84,7 @@ const Footer = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-xl text-accent-foreground">
-                  D
-                </div>
-                {/* <img src={LogoImage} alt="Logo" className="w-32" /> */}
+                <img src={LogoImage} alt="Logo" className="w-12" />
                 <span className="text-2xl font-bold">Debbie's Crunchy</span>
               </div>
               <p className="text-footer-foreground/80 leading-relaxed max-w-md">
