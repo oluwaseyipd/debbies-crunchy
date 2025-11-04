@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
 
-## Project info
+# Debbie's Crunchy – Gourmet Handcrafted Snacks
 
-**URL**: https://lovable.dev/projects/11fcc59d-7643-4576-a80e-c44cfc83e7c3
+## Overview
 
-## How can I edit this code?
+Debbie's Crunchy is a modern web application for a gourmet snack brand, offering handcrafted snacks made with exotic spices and fresh ingredients. The site provides a seamless shopping experience, product highlights, testimonials, and easy ordering.
 
-There are several ways of editing your application.
+**URL**: https://debbies-crunchy.vercel.app/
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/11fcc59d-7643-4576-a80e-c44cfc83e7c3) and start prompting.
+- Responsive, mobile-friendly design
+- Product showcase with images and descriptions
+- Customer testimonials
+- Order modal for quick purchases
+- Modern UI components (shadcn-ui)
+- Fast performance with Vite
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+- **React** (TypeScript)
+- **Vite**
+- **Tailwind CSS**
+- **shadcn-ui**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or bun
 
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
+cd debbies-crunchy
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
+# or
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Running the Development Server
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run dev
+# or
+bun run dev
+```
+Visit `http://localhost:5173` in your browser.
 
-**Use GitHub Codespaces**
+### Building for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```sh
+npm run build
+# or
+bun run build
+```
 
-## What technologies are used for this project?
+### Preview Production Build
 
-This project is built with:
+```sh
+npm run preview
+# or
+bun run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+├── public/                # Static assets
+├── src/
+│   ├── assets/            # Images and media
+│   ├── components/        # React components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── pages/             # Page components
+│   └── App.tsx            # Main app component
+├── index.html             # HTML entry point
+├── package.json           # Project metadata and scripts
+├── tailwind.config.ts     # Tailwind CSS configuration
+└── vite.config.ts         # Vite configuration
+```
 
-Simply open [Lovable](https://lovable.dev/projects/11fcc59d-7643-4576-a80e-c44cfc83e7c3) and click on Share -> Publish.
+## Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `dev` – Start development server
+- `build` – Build for production
+- `preview` – Preview production build
 
-Yes, you can!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can deploy the production build to any static hosting provider (e.g., Vercel, Netlify, GitHub Pages). Upload the contents of the `dist/` directory after running the build command.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for review.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please contact the project maintainer.
