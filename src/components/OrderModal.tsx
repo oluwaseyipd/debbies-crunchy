@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { CalendarIcon, Clock } from "lucide-react";
-import { format } from "date-fns";
+import { format, startOfDay, isBefore } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "@/hooks/use-toast";
 
@@ -97,7 +97,7 @@ const OrderModal = ({ open, onOpenChange, productName, productPrice }: OrderModa
                     mode="single"
                     selected={date}
                     onSelect={setDate}
-                    disabled={(date) => date < new Date()}
+                    disabled={(d) => isBefore(d, startOfDay(new Date()))}
                     initialFocus
                     className="pointer-events-auto"
                   />
